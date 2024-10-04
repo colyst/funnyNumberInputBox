@@ -1,0 +1,41 @@
+{
+  "name": "thefuny_electron-str",
+  "productName": "thefuny_stripped",
+  "version": "1.0.0",
+  "description": "the anime want the funy numbers but can't actually get it :(",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "keywords": [],
+  "author": "colyst",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^22.0.0",
+    "electron-builder": "^25.1.7"
+  },
+  "build": {
+    "appId": "funnyNumber.Input.Boxx",
+    "productName": "funnyNumberInputBoxx",
+    "files": [
+      "main.js",
+      "src/**/*",
+      "dist/**/*",
+      "!**/*.map",
+      "!**/*.spec.js"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  },
+  "dependencies": {
+    "bluebird": "^3.7.2"
+  }
+}
